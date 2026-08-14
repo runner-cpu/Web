@@ -4,11 +4,23 @@ html,
 body {
   font-family: 'Instrument Serif', serif;
   background: #000;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* ---------- Inter font for body text ---------- */
+.font-sans,
+body button,
+body input,
+body nav,
+body footer,
+body p {
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 /* ---------- Liquid glass ---------- */
@@ -61,45 +73,23 @@ body {
 
 /* ---------- Mobile menu overlays ---------- */
 @keyframes mobile-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes mobile-panel-in {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes mobile-link-in {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes mobile-cta-in {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .animate-mobile-fade-in {
@@ -181,11 +171,25 @@ body {
   box-shadow: inset 0 1px 1px rgba(24, 44, 65, 0.12);
 }
 
-/* ---------- Hero content transitions ---------- */
-.hero-color {
-  transition: color 700ms ease;
+/* ---------- Subpage styles ---------- */
+.subpage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(27, 19, 60, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1b133c;
 }
 
-.hero-bg-color {
-  transition: background-color 700ms ease, border-color 700ms ease;
+.subpage-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
